@@ -1,0 +1,20 @@
+{
+  "float": [
+    {
+      "name": "checkbox_width",
+      "value": "20"
+    },
+    {
+      "name": "checkbox_margin",
+      "value": "10"
+    },
+    {
+      "name": "item_font_size",
+      "value": "14"
+    },
+    {
+      "name": "list_item_height",
+      "value": "40"
+    }
+  ]
+}
