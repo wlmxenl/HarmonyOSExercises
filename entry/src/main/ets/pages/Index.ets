@@ -17,7 +17,13 @@ struct Index {
 
   build() {
     Row() {
-      Column() {
+      Column({ space: CommonConstant.COLUMN_SPACE }) {
+        Button("Login")
+          .fontSize(18)
+          .onClick(() => {
+            router.pushUrl({ url: "pages/login/LoginPage" })
+          })
+
         Button("ToDoPage")
           .fontSize(18)
           .onClick(() => {
