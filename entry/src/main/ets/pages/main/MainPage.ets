@@ -15,6 +15,7 @@ struct MainPage {
 
       Text(name)
         .margin({ top: 1 })
+        .fontSize(12)
         .fontColor(this.currentIndex == index ? "#3997ff" : "#999999")
     }
     .height($r("app.float.mainPage_barHeight"))
