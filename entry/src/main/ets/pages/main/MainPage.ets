@@ -1,4 +1,4 @@
-import CommonConstant from '../../common/constant/CommonConstant'
+
 import Home from '../home/Home'
 import Mine from '../mine/Mine'
 

@@ -1,4 +1,4 @@
-import CommonConstant from '../common/constant/CommonConstant'
+import CommonConstant from '../common/constant/CommonConstants'
 import TodoItem from '../view/TodoItem'
 import DataModel from '../viewmodel/DataModel'
 import router from '@ohos.router'
@@ -36,7 +36,7 @@ struct ToDoListPage {
           .fontColor(Color.Black)
       }
       .align(Alignment.Start)
-      .width(CommonConstant.FULL_LENGTH)
+      .width(CommonConstant.FULL_PARENT)
       .margin({ top: CommonConstant.COLUMN_SPACE })
 
 
@@ -44,8 +44,8 @@ struct ToDoListPage {
         TodoItem({ content: item })
       }, (item: string) => JSON.stringify(item))
     }
-    .width(CommonConstant.FULL_LENGTH)
-    .height(CommonConstant.FULL_LENGTH)
+    .width(CommonConstant.FULL_PARENT)
+    .height(CommonConstant.FULL_PARENT)
     .backgroundColor($r("app.color.page_background"))
   }
 }

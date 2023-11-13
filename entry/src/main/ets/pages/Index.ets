@@ -1,4 +1,4 @@
-import CommonConstant from '../common/constant/CommonConstant'
+import CommonConstant from '../common/constant/CommonConstants'
 import router from '@ohos.router'
 import hilog from '@ohos.hilog'
 
@@ -30,8 +30,8 @@ struct Index {
             router.pushUrl({ url: "pages/ToDoListPage", params: { "index": 0 } })
           })
       }
-      .width(CommonConstant.FULL_LENGTH)
+      .width(CommonConstant.FULL_PARENT)
     }
-    .height(CommonConstant.FULL_LENGTH)
+    .height(CommonConstant.FULL_PARENT)
   }
 }

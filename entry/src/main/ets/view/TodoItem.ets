@@ -1,4 +1,4 @@
-import CommonConstant from '../common/constant/CommonConstant'
+import CommonConstant from '../common/constant/CommonConstants'
 @Component
 export default struct TodoItem {
   private content?: string

@@ -1,4 +1,6 @@
-import CommonConstant from '../../common/constant/CommonConstant'
+import Prompt from '@system.prompt'
+import router from '@ohos.router'
+import CommonConstants from '../../common/constant/CommonConstants'
 
 
 @Extend(TextInput) function inputStyle() {
@@ -29,6 +31,28 @@ struct LoginPage {
   @State account: string = ''
   @State password: string = ''
   @State isShowProgress: boolean = false
+  private timeOutId: number = -1
+
+  login(): void {
+    if (this.account == '' || this.password == '') {
+      Prompt.showToast({message: "请输入账号或密码"})
+    } else {
+      this.isShowProgress = true
+      // 模拟登录
+      if (this.timeOutId == -1) {
+        this.timeOutId = setTimeout(() => {
+          this.isShowProgress = false
+          this.timeOutId = -1
+          router.replaceUrl({url: "pages/main/MainPage"})
+        }, 2000)
+      }
+    }
+  }
+
+  aboutToDisappear() {
+    clearTimeout(this.timeOutId);
+    this.timeOutId = -1;
+  }
 
   build() {
     Column() {
@@ -78,7 +102,7 @@ struct LoginPage {
         .margin({ top: "30vp" })
         .width("80%")
         .onClick(() => {
-
+          this.login()
         })
 
       Text("注册账号")
@@ -116,8 +140,8 @@ struct LoginPage {
       .margin({ top: "12vp" })
     }
     .backgroundColor($r("app.color.page_background"))
-    .height(CommonConstant.FULL_LENGTH)
-    .width(CommonConstant.FULL_LENGTH)
+    .height(CommonConstants.FULL_PARENT)
+    .width(CommonConstants.FULL_PARENT)
     .padding({
       left: $r("app.float.page_padding_hor"),
       right: $r("app.float.page_padding_hor"),
