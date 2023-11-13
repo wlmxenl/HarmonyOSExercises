@@ -1,8 +1,8 @@
-export default class CommonConstant {
+export default class CommonConstants {
   /**
    * Full width or height.
    */
-  static readonly FULL_LENGTH: string = '100%';
+  static readonly FULL_PARENT: string = '100%';
 
   /**
    * Title height.
