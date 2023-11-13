@@ -1,6 +1,7 @@
 
 import Home from '../home/Home'
 import Mine from '../mine/Mine'
+import News from '../news/News'
 
 @Entry
 @Component
@@ -30,11 +31,15 @@ struct MainPage {
       }
       .tabBar(this.TabItem("首页", 0, $r("app.media.home_selected"), $r("app.media.home_normal")))
 
+      TabContent() {
+        News()
+      }
+      .tabBar(this.TabItem("新闻", 1, $r("app.media.tab_news_selected"), $r("app.media.tab_news_normal")))
 
       TabContent() {
         Mine()
       }
-      .tabBar(this.TabItem("我的", 1, $r("app.media.mine_selected"), $r("app.media.mine_normal")))
+      .tabBar(this.TabItem("我的", 2, $r("app.media.mine_selected"), $r("app.media.mine_normal")))
     }
     .vertical(false)
     .backgroundColor(Color.White)
