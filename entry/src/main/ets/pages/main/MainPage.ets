@@ -1,12 +1,12 @@
 
 import Home from '../home/Home'
 import Mine from '../mine/Mine'
-import News from '../news/News'
+import Project from '../project/Project'
 
 @Entry
 @Component
 struct MainPage {
-  @State currentIndex: number = 0
+  @State currentIndex: number = 1
 
   @Builder TabItem(name: string, index: number, selectedImage: Resource, normalImage: Resource) {
     Column() {
@@ -32,7 +32,7 @@ struct MainPage {
       .tabBar(this.TabItem("首页", 0, $r("app.media.home_selected"), $r("app.media.home_normal")))
 
       TabContent() {
-        News()
+        Project()
       }
       .tabBar(this.TabItem("新闻", 1, $r("app.media.tab_news_selected"), $r("app.media.tab_news_normal")))
 
