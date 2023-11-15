@@ -6,7 +6,7 @@ import Project from '../project/Project'
 @Entry
 @Component
 struct MainPage {
-  @State currentIndex: number = 1
+  @State currentIndex: number = 0
 
   @Builder TabItem(name: string, index: number, selectedImage: Resource, normalImage: Resource) {
     Column() {
